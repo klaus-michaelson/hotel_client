@@ -14,3 +14,7 @@ a {
 * {
   box-sizing: border-box;
 }
+
+.bg-primary {
+  background-color: #e54818;
+}
