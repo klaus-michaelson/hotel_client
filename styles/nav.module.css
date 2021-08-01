@@ -1,0 +1,60 @@
+.nav {
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 94%;
+  align-self: center;
+  border-radius: 1rem;
+  box-shadow: 0 0 15px -5px black;
+  margin-top: 12px;
+  z-index: 1000000 !important;
+  background-color: rgba(255, 255, 255, 0.9);
+}
+.companyBrand {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  margin: 10px;
+}
+.companyLogo {
+  display: flex;
+}
+.companyName {
+  display: flex;
+  margin: 0;
+  font-weight: bold;
+  font-size: 1.7em;
+}
+.companyServices {
+  margin: 10px;
+  font-weight: bold;
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  .nav {
+    width: 95%;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .nav {
+    width: 96%;
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .nav {
+    width: 97%;
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  .nav {
+    width: 98%;
+  }
+}
