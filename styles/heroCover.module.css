@@ -1,0 +1,53 @@
+.heroCover {
+  min-height: 100vh;
+  background-image: url("../public/backgroundImage/foods.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  /* background-attachment: fixed; */
+  background-position: right top;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.textPart {
+  margin-bottom: 3rem;
+  margin-left: 1rem;
+  border-radius: 1rem;
+  padding: 1rem;
+  max-width: 600px;
+  background-image: linear-gradient(
+    to right bottom,
+    rgba(0, 0, 0, 1),
+    rgba(0, 0, 0, 0.3) 60%,
+    rgba(0, 0, 0, 0.1) 70% rgba(0, 0, 0, 0) 90%
+  );
+  color: white;
+  /* border: 1px solid blue; */
+}
+.header {
+  color: white;
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 3rem;
+}
+.button {
+  border-radius: 1rem;
+  border: 1px solid white;
+  background-color: inherit;
+  padding: 10px 20px;
+  font-size: 1.4rem;
+}
+.button:hover {
+  background-color: white;
+  color: black;
+}
+
+.buttonIcon {
+  padding-right: 1rem;
+}
+@media only screen and (max-width: 600px) {
+  .textPart {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+}
