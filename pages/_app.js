@@ -1,4 +1,4 @@
-import "../styles/bootstrap-grid.min.css";
+// import "../styles/bootstrap-grid.min.css";
 import "antd/dist/antd.css";
 import MainLayout from "../components/MainLayout";
 import "../styles/globals.css";
