@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { Rate } from "antd";
+import { Row, Col, Rate } from "antd";
 import { LeftOutlined, RightOutlined } from "@ant-design/icons";
 import styles from "../styles/detailOfVictuals.module.css";
 
