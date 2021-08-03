@@ -1,3 +1,10 @@
+:root {
+  --theme-fg: black;
+  --theme-bg: white;
+  --theme-clr1: orange;
+  --theme-clr2: #ccc;
+}
+
 html,
 body {
   padding: 0;
@@ -13,4 +20,11 @@ a {
 
 * {
   box-sizing: border-box;
+}
+
+
+
+hr {
+  border-color: var(--theme-clr2);
+  border-top: 0;
 }
