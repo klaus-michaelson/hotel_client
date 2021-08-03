@@ -2,7 +2,7 @@ import { useState } from "react";
 import AuthLayout from "../components/AuthLayout";
 import { Input, Card, Row, Col, Button, Space} from 'antd'
 import {errorStyle} from '../public/validation/validation'
-import Link from 'next/Link'
+import Link from 'next/link'
 
 const SendCode=()=>{
     const [code, setCode]=useState()

@@ -1,6 +1,7 @@
 import styles from '../styles/coverpage.module.css'
 import {Row, Col, Button} from 'antd'
-import Link from 'next/Link'
+import { CaretRightOutlined } from "@ant-design/icons";
+import Link from 'next/link'
 const CoverPage=()=>{
     return <div className={styles.coverPage}>
         <Row>
@@ -11,7 +12,7 @@ const CoverPage=()=>{
                 <h2 className={styles.subText}>
                     Lorem Ipsum is just a dummy text of the printing and typesetting industry.
                 </h2>
-                <Button type="default" size="large"><Link className={styles.myLink} href='/home'>Home Page</Link></Button>
+                <Button type="default" className={styles.circleButton} size="large"><Link className={styles.myLink} href='/home'><CaretRightOutlined /></Link></Button>
             </Col>
         </Row>
     </div>

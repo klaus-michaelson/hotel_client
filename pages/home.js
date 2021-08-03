@@ -1,5 +1,5 @@
 import styles from '../styles/home.module.css'
-import {Carousel,Row,Col,Card} from 'antd'
+import {Carousel,Row,Col,Card,CardProps} from 'antd'
 import Image from 'next/image'
 const {Meta} = Card
 const Home=()=>{
