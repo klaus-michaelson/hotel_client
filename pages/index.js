@@ -1,10 +1,3 @@
-import RoomDisplay from "./roomDisplay";
-import { Row, Col, Divider } from "antd";
+const Index = () => <div style={{ marginTop: "80px" }}>The Index/Root</div>;
 
-export default function Home() {
-  return (
-    <>
-      <RoomDisplay />
-    </>
-  );
-}
+export default Index;
