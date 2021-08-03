@@ -1,5 +1,5 @@
-// import "../styles/bootstrap-grid.min.css";
 import "antd/dist/antd.css";
+import "../styles/base.css";
 import MainLayout from "../components/MainLayout";
 import "../styles/globals.css";
 
