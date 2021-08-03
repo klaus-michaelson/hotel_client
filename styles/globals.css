@@ -18,7 +18,59 @@ a {
 .bg-primary {
   background-color: #e54818;
 }
-
+:root{
+  --my-primary:rgb(253,126,20);
+  --my-light:white
+}
+.ant-btn-default{
+  border-radius: 10px;
+  border-color: var(--my-primary);
+  color: var(--my-primary);
+}
+.ant-btn-default>a:hover{
+  color:var(--my-primary)
+}
+.ant-btn-default:hover, .ant-btn-default:focus {
+  color: var(--my-primary);
+  border-color: var(--my-primary);
+}
+.ant-btn-default:hover{
+  background-color:var(--my-primary);
+  border-color: var(--my-primary);  
+  color:var(--my-light)
+}
+.ant-btn-default:active{
+  box-shadow:0 0 5px var(--my-primary);
+}
+.ant-input:hover{
+  border-color: var(--my-primary);
+}
+.ant-input:focus{
+  box-shadow:0 0 5px var(--my-primary);
+  border-color: var(--my-primary)
+}
+.ant-checkbox-checked .ant-checkbox-inner {
+  background-color: var(--my-primary);
+  border-color: var(--my-primary);
+}
+.ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn {
+  color: var(--my-primary);
+  text-shadow: 0 0 0.25px currentColor;
+}
+.ant-tabs-tab-btn:active {
+  color: var(--my-primary) !important;
+}
+.ant-tabs-tab:hover {
+  color: var(--my-primary);
+}
+.ant-tabs-ink-bar {
+  background:var(--my-primary);
+}
+.yaredPrimary{
+  color:var(--my-primary);
+  font-weight: bold;
+  margin-bottom: 0px !important;
+}
 /* Extra small devices (phones, 600px and down) */
 /* @media only screen and (max-width: 600px) {...} */
 

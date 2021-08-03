@@ -1,0 +1,56 @@
+.home{
+    width: 100%;
+}
+.myLink{
+    text-decoration: none;
+}
+.contentStyle{
+    height: 70vh;
+    color: #fff;
+    text-align: center;
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position: center;
+    display: flex !important;
+    align-items: flex-end;
+}
+.bgImagePpt{
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position: center;
+}
+.textDiv{
+    background: linear-gradient(0deg, rgba(0,0,0,0.15) 0%, rgba(0,0,0,0.7) 44%, rgba(0,0,0,0.15) 100%);
+}
+.textDiv *{
+    color:white;
+}
+.textDiv h1{
+    font-weight: bold;
+}
+.pets{
+    background-image: url('../public/images/pets.jpg');
+}
+.rooms{
+    background-image: url('../public/images/rooms.jpg');
+}
+.location{
+    background-image: url('../public/images/location.jpg');
+}
+.cozy{
+    background-image: url('../public/images/cozy.jpg');
+}
+.oceanView{
+    height: 400px;
+    background-image: url("../public/images/ocean_view.jpg");
+}
+.lgSecondDiv{
+    margin:auto;
+}
+
+.lgSecondDiv > div *{
+    margin-left: 20px;
+}
+.lgSecondDiv > div h1{
+    font-weight: bold;
+}
