@@ -19,14 +19,31 @@ export default class RoomDisplay extends React.Component {
         id: 0,
         imgs: ["/assets/images/3.png", "/assets/images/2.png"],
         type: "Delux Room",
+        rooms: [
+          {
+            no: 119,
+            floor: 2,
+            view: "outside"
+          },
+          {
+            no: 102,
+            floor: 1,
+            view: "outside"
+          }
+        ],
         available: true,
-        availableMsg: "Only 1 Room left",
         beds: 1,
         sleeps: 2,
         description: "Room description in detail goes here",
         price: 1231,
         discount: 12,
-        accessibility: ["308 sq ft", "City view", "Free wifi", "Free self parking"],
+        accessibility: {
+          "Sqft": "308 sq ft",
+          "City view": true,
+          "Central": true,
+          "Wifi": true,
+          "Parking": true
+        },
       },
     ],
   };
@@ -43,11 +60,19 @@ export default class RoomDisplay extends React.Component {
 
 
   render() {
+    const modalProps = {
+      visible: this.state.roomDetailVisible,
+      onOk: this.handleOk,
+      onCancel: this.handleCancel
+    }
     return (
       <>
+        <br />
+        <br />
+        <br />
+        <br />
         <RoomSearchBox />
-        <Reservation />
-        <Profile />
+        {/* <Profile /> */}
         <div className="row flexcntnt-cntr flex-wrap">
           {
             this.state.list.map((room) => (
@@ -61,7 +86,7 @@ export default class RoomDisplay extends React.Component {
                     }
                   </Image.PreviewGroup>
                   <small className={styles.avs}>
-                    {room.availableMsg}
+                    Rooms Left : {room.rooms.length}
                   </small>
                 </div>
                 <div className={styles.descr}>
@@ -85,14 +110,7 @@ export default class RoomDisplay extends React.Component {
                   </div>
                   <div className="row">
                     <Button onClick={this.showModal} style={{ flex: 1 }} type="primary">BOOK NOW</Button>
-                    <Modal
-                      visible={this.state.roomDetailVisible}
-                      onOk={this.handleOk}
-                      onCancel={this.handleCancel}
-                      footer={[]}
-                    >
-                      <RoomDetail item={room} />
-                    </Modal>
+                    <RoomDetail item={room} modalProps={modalProps} />
                   </div>
                 </div>
               </div>

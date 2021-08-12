@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Menu, Slider, Button, Input, Dropdown, Checkbox } from "antd";
+import { Menu, Slider, Button, Input, Dropdown, Checkbox, Radio } from "antd";
 import { DownOutlined } from '@ant-design/icons';
 
 
@@ -20,6 +20,12 @@ export class RoomSearchBox extends Component {
                 <Menu.ItemGroup title="Amenities">
                     <Checkbox>Wifi</Checkbox>
                     <Checkbox>Shower</Checkbox>
+                </Menu.ItemGroup>
+                <Menu.ItemGroup title="View">
+                    <Radio.Group>
+                        <Radio value="inside">Inside</Radio>
+                        <Radio value="outside">Outside</Radio>
+                    </Radio.Group>
                 </Menu.ItemGroup>
             </Menu>
         )
