@@ -7,7 +7,7 @@ import styles from "../styles/nav.module.css";
 export const Nav = () => {
   const navItems = [
     { label: "Home", url: "/home" },
-    { label: "Room", url: "/roomDisplay" },
+    { label: "Room", url: "/room" },
     { label: "Food-Drink", url: "/food-drink" },
     { label: "Service", url: "/services" },
     { label: "Others", url: "/others" },
