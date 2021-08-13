@@ -1,5 +1,5 @@
 import {useState} from 'react'
-import Link from 'next/Link'
+import Link from 'next/link'
 import { Input, Card, Row, Col, Button, Space, Checkbox} from 'antd'
 import AuthLayout from '../components/AuthLayout'
 import {errorPhone,errorPass,errorEmail} from '../public/validation/validation'
