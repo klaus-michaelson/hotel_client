@@ -1,16 +1,28 @@
-import Link from "next/Link";
+import Link from "next/link";
 import Image from "next/image";
+import { Menu, Dropdown } from "antd";
 import { MenuOutlined } from "@ant-design/icons";
 import styles from "../styles/nav.module.css";
 
 export const Nav = () => {
   const navItems = [
     { label: "Home", url: "/home" },
-    { label: "Room", url: "/roomDisplay" },
+    { label: "Room", url: "/room" },
     { label: "Food-Drink", url: "/food-drink" },
     { label: "Service", url: "/services" },
-    { label: "Login", url: "/login" },
+    { label: "Others", url: "/others" },
   ];
+  const menu = (
+    <Menu className={`mt-3`}>
+      {navItems.map((item) => (
+        <Menu.Item key={item.url} className={`pr-5`}>
+          <Link href={item.url}>
+            <a>{item.label}</a>
+          </Link>
+        </Menu.Item>
+      ))}
+    </Menu>
+  );
   const navItemsElements = navItems.map((item) => {
     return (
       <div key={item.url}>
@@ -38,12 +50,14 @@ export const Nav = () => {
           {navItemsElements}
           <div className={styles.profilPicture}></div>
         </div>
-        <button
-          onClick={() => alert("'.moreButton' is clicked")}
-          className={styles.moreButton}
-        >
-          <MenuOutlined />
-        </button>
+        <Dropdown overlay={menu} trigger={["click"]}>
+          <a
+            className={`${styles.moreButton} ant-dropdown-link`}
+            onClick={(e) => e.preventDefault()}
+          >
+            <MenuOutlined />
+          </a>
+        </Dropdown>
       </div>
     </div>
   );

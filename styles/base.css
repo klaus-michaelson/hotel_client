@@ -84,6 +84,9 @@
 .blk {
 	display: block;
 }
+.bold {
+	font-weight: bold;
+}
 .box {
 	border: 1px solid #555;
 }
