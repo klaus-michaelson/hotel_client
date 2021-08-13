@@ -1,10 +1,18 @@
-import styles from "../styles/location.module.css";
+import { Row, Col, Typography } from "antd";
 
+const { Title } = Typography;
 export const Location = ({}) => {
   return (
-    <div className={styles.main}>
-      <h1>This is Location.js</h1>
-    </div>
+    <Row justify="center" className={`mb-4`}>
+      <Col>
+        <Title className={`text-primary fw-900`}>Location</Title>
+      </Col>
+      <Col
+        span={24}
+        className={`as-image`}
+        style={{ height: "500px", backgroundImage: "url('/map.jpg')" }}
+      ></Col>
+    </Row>
   );
 };
 

@@ -1,0 +1,17 @@
+{
+  "admin": [
+    { "name": "dashboard", "dataType": {} },
+    { "name": "manageEmployees", "dataType": {} },
+    { "name": "manageRooms", "dataType": {} },
+    { "name": "manageFoodAndDrinks", "dataType": {} },
+    { "name": "manageServices", "dataType": {} },
+    { "name": "manageHall", "dataType": {} },
+    { "name": "manageRoomServices", "dataType": {} },
+    { "name": "manageEmployees", "dataType": {} },
+    { "name": "viewReservedRooms", "dataType": {} },
+    { "name": "viewOrderedFoodAndDrinks", "dataType": {} },
+    { "name": "viewOrderedServices", "dataType": {} },
+    { "name": "viewOrderedHall", "dataType": {} },
+    { "name": "viewOrderedRoomServices", "dataType": {} }
+  ]
+}
