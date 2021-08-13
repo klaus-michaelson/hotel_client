@@ -23,7 +23,9 @@
     text-align: left;
 }
 .gBookDropdownBox {
+    background-color: var(--theme-bg);
     padding: 10px;
+    box-shadow: 0 0 5px -2px var(--theme-fg);
 }
 
 .ant-collapse * {
@@ -52,15 +54,6 @@
 .pd-hor {
     padding: 0 5px;
 }
-
-
-.profileView h3 {
-    margin: 0;
-    padding: 5px;
-    font-weight: bold;
-}
-
-
 .roomDisp {
     display: inline-block;
     position: relative;
