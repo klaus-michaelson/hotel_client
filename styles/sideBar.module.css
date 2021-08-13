@@ -1,0 +1,49 @@
+.main {
+  display: none;
+  /* position: fixed !important; */
+  top: 100px !important;
+}
+.item {
+  display: flex !important;
+  align-self: center !important;
+  padding: 10px;
+  margin: 5px;
+  color: var(--my-dark-color) !important;
+}
+.selected-item {
+  color: var(--my-background-color) !important;
+  background-color: var(--my-primary-color) !important;
+}
+.item > span {
+  display: none;
+}
+
+@media only screen and (min-width: 600px) {
+  .main {
+    display: block;
+    max-width: 40px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .main {
+    max-width: 65px;
+  }
+  .item {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .main {
+    max-width: 300px;
+  }
+  .item > span.label {
+    display: inline-block !important;
+  }
+  .item {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}

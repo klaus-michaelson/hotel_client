@@ -1,4 +1,4 @@
-import { PlayCircleOutlined, DownloadOutlined } from "@ant-design/icons";
+import { PlayCircleOutlined } from "@ant-design/icons";
 import styles from "../styles/heroCover.module.css";
 
 export const HeroCover = ({}) => {
