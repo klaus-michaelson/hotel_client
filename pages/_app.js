@@ -1,6 +1,5 @@
-// import "../styles/bootstrap-grid.min.css";
 import "antd/dist/antd.css";
-// import { MainLayout } from "../components/MainLayout";
+import "../styles/base.css";
 import "../styles/globals.css";
 
 function MyApp({ Component, pageProps }) {
