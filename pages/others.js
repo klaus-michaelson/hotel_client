@@ -9,17 +9,24 @@ const { Title } = Typography;
 
 export const Others = ({}) => {
   return (
-    <div className={`d-flex flex-column flex-fill`}>
-      <Row
-        justify="center"
-        align="middle"
-        gutter={[0, 0]}
-        className={`m-3 p-3 mt-4 rounded border border-light bg-dark`}
-        style={{ minHeight: "300px" }}
-      >
-        <Title className={`text-background`}>The graph will be here</Title>
-      </Row>
-      <ServiceManager />
+    <div className={`d-flex`} style={{ paddingTop: "100px" }}>
+      <div className={`mt-4`}>
+        <SideBar />
+      </div>
+      <div className={`d-flex flex-column flex-fill`}>
+        <Row
+          justify="center"
+          align="middle"
+          gutter={[0, 0]}
+          className={`m-3 p-3 mt-4 rounded border border-light bg-dark`}
+          style={{ minHeight: "300px" }}
+        >
+          <Title className={`text-background d-flex flex-fill`}>
+            The graph will be here
+          </Title>
+        </Row>
+        <ServiceManager />
+      </div>
     </div>
   );
 };

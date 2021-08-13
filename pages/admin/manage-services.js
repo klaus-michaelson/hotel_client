@@ -20,23 +20,6 @@ import { ServiceManager } from "../../components/Service/ServiceManager";
 const { Title } = Typography;
 
 export const ManageServices = ({}) => {
-  return (
-    <div className={`d-flex flex-column flex-fill`}>
-      <Row
-        justify="center"
-        align="middle"
-        gutter={[0, 0]}
-        className={`m-3 p-3 mt-4 rounded border border-light bg-dark`}
-        style={{ minHeight: "300px" }}
-      >
-        <Title className={`text-background`}>The graph will be here</Title>
-      </Row>
-      <ServiceManager />
-    </div>
-  );
-};
-
-ManageServices.getLayout = function getLayout(page) {
   const items = [
     {
       key: "dashboard",
@@ -106,12 +89,27 @@ ManageServices.getLayout = function getLayout(page) {
       icon: <FontAwesomeIcon icon={faCogs} />,
     },
   ];
-
   return (
-    <MainLayout>
-      <SideBar items={items} />
-      <div className={`d-flex flex-fill`}>{page}</div>
-    </MainLayout>
+    <div
+      className={`d-flex justify-content-center flex-fill`}
+      style={{ paddingTop: "100px" }}
+    >
+      <div className={`mt-4`}>
+        <SideBar items={items} />
+      </div>
+      <div className={`d-flex flex-column flex-fill`}>
+        {/* <Row
+          justify="center"
+          align="middle"
+          gutter={[0, 0]}
+          className={`m-3 p-3 mt-4 rounded border border-light bg-dark`}
+          style={{ minHeight: "300px" }}
+        >
+          <Title className={`text-background`}>The graph will be here</Title>
+        </Row> */}
+        <ServiceManager />
+      </div>
+    </div>
   );
 };
 

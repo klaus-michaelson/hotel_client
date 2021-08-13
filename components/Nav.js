@@ -7,10 +7,10 @@ import styles from "../styles/nav.module.css";
 export const Nav = () => {
   const navItems = [
     { label: "Home", url: "/home" },
-    { label: "Room", url: "/room" },
+    { label: "Room", url: "/room-display" },
     { label: "Food-Drink", url: "/food-drink" },
     { label: "Service", url: "/services" },
-    { label: "Others", url: "/others" },
+    { label: "Admin", url: "/admin/dashboard" },
   ];
   const menu = (
     <Menu className={`mt-3`}>

@@ -25,14 +25,20 @@ export const SideBar = ({
     },
     {
       key: "manageEmployees",
-      url: "/admin/manage-employees",
+      url: "/admin/manage-employee",
       label: "Manage Employees",
       icon: <FontAwesomeIcon icon={faUsersCog} />,
     },
     {
       key: "manageRooms",
-      url: "/admin/manage-rooms",
+      url: "/admin/manage-room",
       label: "Manage Rooms",
+      icon: <FontAwesomeIcon icon={faBed} />,
+    },
+    {
+      key: "manageRoomType",
+      url: "/admin/manage-room-type",
+      label: "Manage Room Types",
       icon: <FontAwesomeIcon icon={faBed} />,
     },
     {
@@ -55,15 +61,9 @@ export const SideBar = ({
     },
     {
       key: "manageRoomServices",
-      url: "/admin/manage-room-services",
+      url: "/admin/manage-room-service",
       label: "Manage RoomServices",
       icon: <FontAwesomeIcon icon={faCogs} />,
-    },
-    {
-      key: "manageEmployees",
-      url: "/admin/manage-employees",
-      label: "Manage Employees",
-      icon: <FontAwesomeIcon icon={faUsers} />,
     },
     {
       key: "viewReservedRooms",
@@ -79,7 +79,7 @@ export const SideBar = ({
     },
     {
       key: "viewOrderedRoomServices",
-      url: "/admin/view-ordered-room-services",
+      url: "/admin/view-ordered-room-service",
       label: "View Ordered RoomServices",
       icon: <FontAwesomeIcon icon={faCogs} />,
     },
@@ -89,17 +89,27 @@ export const SideBar = ({
     <Row className={`${styles.main}`} align="middle">
       <Col span={24}>
         <Row>
-          {items.map((item) => {
-            return (
+          {items.map((item, index) => {
+            return index != 1 && item.key == "manageEmployees" ? null : (
               <Col span={24} key={item.key} className={`fs-1 fw-bold `}>
-                <Link href={item.url}>
+                <Link
+                  href={
+                    item.key == "manageHall"
+                      ? "/admin/manage-room-type"
+                      : item.url
+                  }
+                >
                   <a
                     className={`${styles.item} ${
                       item.isSelected ? styles["selected-item"] : ""
                     } button rounded`}
                   >
                     {item.icon}
-                    <span className={`ml-3 ${styles.label}`}>{item.label}</span>
+                    <span className={`ml-3 ${styles.label}`}>
+                      {item.key == "manageHall"
+                        ? "Manage Room Type"
+                        : item.label}
+                    </span>
                   </a>
                 </Link>
               </Col>

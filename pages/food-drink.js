@@ -928,7 +928,7 @@ export const FoodDrink = () => {
   });
   console.log(itemsElements);
   return (
-    <Row>
+    <Row style={{ paddingTop: "100px" }}>
       <Col>
         <SearchAndFilterFoodAndDrink />
       </Col>

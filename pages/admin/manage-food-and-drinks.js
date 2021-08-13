@@ -21,24 +21,6 @@ import { DrinkManager } from "../../components/FoodAndDrink/DrinkManager";
 const { Title } = Typography;
 
 export const ManageFoodAndDrinks = ({}) => {
-  return (
-    <div className={`d-flex flex-column flex-fill`}>
-      <Row
-        justify="center"
-        align="middle"
-        gutter={[0, 0]}
-        className={`m-3 p-3 mt-4 rounded border border-light bg-dark`}
-        style={{ minHeight: "300px" }}
-      >
-        <Title className={`text-background`}>Place for the graphs</Title>
-      </Row>
-      <FoodManager />
-      <DrinkManager />
-    </div>
-  );
-};
-
-ManageFoodAndDrinks.getLayout = function getLayout(page) {
   const items = [
     {
       key: "dashboard",
@@ -109,6 +91,32 @@ ManageFoodAndDrinks.getLayout = function getLayout(page) {
     },
   ];
 
+  return (
+    <div
+      className={`d-flex justify-content-center flex-fill`}
+      style={{ paddingTop: "100px" }}
+    >
+      <div className={`mt-4`}>
+        <SideBar items={items} />
+      </div>
+      <div className={`d-flex flex-column flex-fill`}>
+        {/* <Row
+          justify="center"
+          align="middle"
+          gutter={[0, 0]}
+          className={`m-3 p-3 mt-4 rounded border border-light bg-dark`}
+          style={{ minHeight: "300px" }}
+        >
+          <Title className={`text-background`}>Place for the graphs</Title>
+        </Row> */}
+        <FoodManager />
+        <DrinkManager />
+      </div>
+    </div>
+  );
+};
+
+ManageFoodAndDrinks.getLayout = function getLayout(page) {
   return (
     <MainLayout>
       <SideBar items={items} />
