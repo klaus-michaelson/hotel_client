@@ -27,6 +27,16 @@ hr {
   background-color: #e54818;
 }
 
+.theme-bgy {
+  background-color: var(--theme-clr1);
+}
+.theme-clry {
+  color: var(--theme-clr1);
+}
+.theme-brdry {
+  border-color: var(--theme-clr1);
+}
+
 /* Extra small devices (phones, 600px and down) */
 /* @media only screen and (max-width: 600px) {...} */
 
